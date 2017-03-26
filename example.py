@@ -4,9 +4,9 @@ import sys
 from hx711 import HX711
 
 def cleanAndExit():
-    print "Cleaning..."
+    print("Cleaning...")
     GPIO.cleanup()
-    print "Bye!"
+    print("Bye!")
     sys.exit()
 
 hx = HX711(5, 6)
@@ -42,7 +42,7 @@ while True:
         
         # Prints the weight. Comment if you're debbuging the MSB and LSB issue.
         val = hx.get_weight(5)
-        print val
+        print(val)
 
         hx.power_down()
         hx.power_up()
